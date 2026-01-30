@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Student Dashboard | Engineers Classroom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Dashboard CSS -->
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+ <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <p class="m-0 fw-bold" style="font-size: 30px;"><img src="img/icon.png" alt="" height="70px">     Engineers<span
+                    style="color: #ffb40f;">Classroom</span></p>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            style="border: none;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="login.html" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                <a href="#" class="nav-item nav-link">
+                    <div id="google_translate_element"></div>
+                </a>
+            </div>
+        </div>
+    
+  <div class="d-flex align-items-center">
+    <span id="userEmail" class="me-3 fw-semibold"></span>
+    <button onclick="logout()" class="btn btn-outline-dark btn-sm">Logout</button>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Main Dashboard -->
+<div class="container my-5">
+
+  <!-- Welcome Card -->
+  <div class="card dashboard-card mb-4">
+    <div class="card-body">
+      <h4 class="fw-bold">Welcome back 👋</h4>
+<p class="text-muted mb-0" id="studentName"></p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card dashboard-card text-center">
+        <div class="card-body">
+          <i class="fa fa-book fa-2x text-primary mb-2"></i>
+          <h6>My Courses</h6>
+          <h3>2</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card dashboard-card text-center">
+        <div class="card-body">
+          <i class="fa fa-chart-pie fa-2x text-success mb-2"></i>
+          <h6>Progress</h6>
+          <h3>45%</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card dashboard-card text-center">
+        <div class="card-body">
+          <i class="fa fa-clock fa-2x text-warning mb-2"></i>
+          <h6>Practice Hours</h6>
+          <h3>12h</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Course -->
+  <div class="card dashboard-card mb-4">
+    <div class="card-body">
+      <h5 class="fw-bold">Current Course</h5>
+      <p class="fw-semibold mb-1">Data Structures & Algorithms</p>
+
+      <div class="progress mb-3" style="height:8px;">
+        <div class="progress-bar bg-primary" style="width:45%;"></div>
+      </div>
+
+      <button class="btn btn-primary w-100">Resume Learning</button>
+    </div>
+  </div>
+
+  <!-- Upcoming Class -->
+  <div class="card dashboard-card">
+    <div class="card-body d-flex justify-content-between align-items-center">
+      <div>
+        <h6 class="fw-bold mb-1">Upcoming Class</h6>
+        <p class="mb-0">Live: System Design Basics</p>
+        <small class="text-muted">Today, 4:00 PM IST</small>
+      </div>
+      <button class="btn btn-primary">Join</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Firebase / Auth -->
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

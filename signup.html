@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | Engineers Classroom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Login/Signup UI CSS -->
+  <link rel="stylesheet" href="css/login.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="login-body">
+
+  <div class="login-card">
+    <h2>Create Account</h2>
+    <p class="subtitle">Start learning with Engineers Classroom</p>
+
+    <form id="signupForm">
+
+      <input type="text" id="name" placeholder="Full Name" required>
+
+      <input type="email" id="email" placeholder="Email Address" required>
+
+      <div class="password-box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class="fa fa-eye" id="togglePassword"></i>
+      </div>
+
+      <button type="submit" class="login-btn">
+        Sign Up
+      </button>
+
+    </form>
+
+    <div class="divider">
+      <span>or continue with</span>
+    </div>
+
+    <div class="social-login">
+      <button id="googleSignup">
+        <i class="fab fa-google"></i> Google
+      </button>
+      <button disabled>
+        <i class="fab fa-github"></i> GitHub
+      </button>
+    </div>
+
+    <p class="signup-text">
+      Already have an account?
+      <a href="login.html">Sign in</a>
+    </p>
+  </div>
+
+  <script type="module" src="js/signup.js"></script>
+</body>
+</html>
